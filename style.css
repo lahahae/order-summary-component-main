@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+  --white: hsl(0, 100%, 100%);
+  --purple: hsl(245, 83%, 68%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Red Hat Display", sans-serif;
+}
+
+body {
+  min-width: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./images/pattern-background-desktop.svg);
+  background-color: var(--pale-blue);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.main {
+  max-width: 28.125rem;
+  height: 43.5625rem;
+  background: #ffffff;
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.151826);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.main__img {
+  width: 100%;
+  height: 13.75rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 2.8125rem 3rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.0625rem;
+  margin-bottom: 1.25rem;
+}
+
+.header__title {
+  font-weight: 900;
+  font-size: 1.75rem;
+  line-height: 2.3125rem;
+  color: var(--dark-blue);
+}
+
+.header__description {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-align: center;
+  color: var(--desaturated-blue);
+}
+
+.plan-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.plan-description {
+  display: flex;
+  align-items: center;
+  background-color: var(--very-pale-blue);
+  padding: 1.5625rem 1.5rem;
+  gap: 1.25rem;
+}
+
+.plan-description__icon {
+  width: 3rem;
+  height: auto;
+}
+
+.plan-content__title {
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  color: var(--dark-blue);
+  margin-bottom: 0.5rem;
+}
+
+.plan-content__description {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  color: var(--desaturated-blue);
+}
+
+.btn {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+}
+
+.plan-description__btn {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.1875rem;
+  text-decoration-line: underline;
+  color: var(--bright-blue);
+  margin-left: auto;
+}
+
+.plan-description__btn:hover,
+.plan-description__btn:active {
+  color: var(--purple);
+  text-decoration-line: none;
+}
+
+.plan-payment__btn {
+  display: block;
+  height: 3.125rem;
+  font-weight: 900;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  background: var(--bright-blue);
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.190291);
+  border-radius: 11px;
+  color: var(--white);
+}
+
+.plan-payment__btn:hover,
+.plan-payment__btn:active {
+  background: var(--purple);
+  color: var(--white);
+}
+
+.plan-cancel__btn {
+  font-weight: 900;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  color: var(--desaturated-blue);
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.plan-cancel__btn:hover,
+.plan-cancel__btn:active {
+  color: var(--dark-blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* mobile view */
+@media only screen and (max-width: 375px) {
+  .main {
+    max-width: 20.4375rem;
+    height: 35.4375rem;
+  }
+
+  .main__img {
+    height: 10rem;
+  }
+
+  .container {
+    margin: 2rem 0rem;
+  }
+
+  .header {
+    margin: 0 2rem;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+
+  .header__title {
+    font-size: 1.375rem;
+    line-height: 1.8125rem;
+  }
+
+  .header__description {
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+  }
+
+  .plan-container {
+    margin: 0 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .plan-description {
+    padding: 1.0625rem 1rem 1rem 1rem;
+  }
+
+  .plan-content__title {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .plan-content__description {
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+  }
+
+  .plan-description__btn {
+    font-size: 0.8125rem;
+    line-height: 1.0625rem;
+  }
+}
