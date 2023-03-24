@@ -173,7 +173,7 @@ body {
 }
 
 /* mobile view */
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 540px) {
   body {
     background-image: url(./images/pattern-background-mobile.svg);
   }
